@@ -1,0 +1,19 @@
+import { useContext } from "react"
+import Navbar from "./components/Navbar"
+import { ThemeContext } from "./context/ThemeContext"
+import "./App.css"
+
+function App() {
+
+  const {dark} = useContext(ThemeContext);
+
+  return (
+    <>
+      <div className={dark ? "darkMood" : "lightMood"} style={}  >
+        <Navbar/>
+      </div>
+    </>
+  )
+}
+
+export default App

@@ -1,0 +1,25 @@
+.lightMood{
+    background-color: bisque;
+    color: rgb(0, 0, 91);
+}
+.darkMood{
+    background-color: rgb(0, 0, 91);
+    color: bisque;
+}
+
+.app {
+    min-height: 100vh;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .dark {
+    background-color: #111827;
+    color: #f3f4f6;
+  }
+  

@@ -1,0 +1,91 @@
+.mainDiv{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+.loginbox{
+    min-height: 60%;
+    margin: auto;
+    background-color: black;
+    padding: 20px 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loginpic{
+    border-radius: 50%;
+    z-index: 10;
+    animation: floatUpDown 5s ease-in-out infinite;
+}
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.titleForm {
+  background: linear-gradient(-45deg, #4158D0, #ef76ac, #FFCC70, #00DBDE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 4px;
+}
+.labelForm{
+    margin: 5px 0px;
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+.inputForm{
+    width: 100%;
+    margin: 0px 0px 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid brown;
+    height: 30px;
+    color: white;
+}
+
+.loginBtn{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 20px auto;
+    display: flex;
+    border-radius: 10px;
+    background-color: #ed2718;
+    font-weight: bold;
+    color: white
+}
+.loginBtn:hover{
+    cursor: pointer;
+    background-color: #d02115;
+}
+.bottomLinks{
+    display: inline-block;
+    text-decoration: underline;
+    text-align: center;
+    color: darkgray;
+    font-size: 12px;
+    line-height: 20px;
+}
+.bottomLinks:hover{
+    color: brown;
+}
+
+

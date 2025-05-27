@@ -1,0 +1,15 @@
+{
+    "todos": [
+      {
+        "id": 1,
+        "text": "قراءة كتاب React",
+        "done": false
+      },
+      {
+        "id": 2,
+        "text": "ممارسة تمارين CSS",
+        "done": true
+      }
+    ]
+  }
+  

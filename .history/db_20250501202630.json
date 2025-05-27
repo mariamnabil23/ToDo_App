@@ -1,0 +1,45 @@
+{
+"todos": [
+    {
+    "id": 1,
+    "text": "task 1",
+    "done": false,
+    "userId": 1,
+    "createdAt": "2025-04-30T10:15:00Z"
+    },
+    {
+    "id": 2,
+    "text": "task2",
+    "done": true,
+    "userId": 1,
+    "createdAt": "2025-04-30T10:15:00Z"
+    },
+    {
+        "id": 3,
+        "text": "task3",
+        "done": true,
+        "userId": 2
+    },
+    {
+        "id": 4,
+        "text": "task4",
+        "done": false,
+        "userId": 2
+    }
+],
+
+
+"users": [
+    {
+        "id": 1,
+        "username": "mona",
+        "password": "1234"
+    },
+    {
+        "id": 2,
+        "username": "ahmed",
+        "password": "abcd"
+    }
+]
+
+}

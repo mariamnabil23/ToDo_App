@@ -1,0 +1,41 @@
+{
+"todos": [
+    {
+    "id": 1,
+    "text": "task 1",
+    "done": false
+    },
+    {
+    "id": 2,
+    "text": "task2",
+    "done": true
+    },
+    {
+        "id": 2,
+        "text": "task2",
+        "done": true
+    },
+    {
+        "id": 2,
+        "text": "task2",
+        "done": false
+    }
+],
+
+
+"users": [
+    {
+        "id": 1,
+        "username": "mona",
+        "password": "1234",
+        "userId": 1
+    },
+    {
+        "id": 2,
+        "username": "ahmed",
+        "password": "abcd"
+        }
+]
+
+
+}
