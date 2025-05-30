@@ -35,7 +35,7 @@ const Register = () => {
       navigate("/login");
 
       const newUser = {
-      id: uuid(),
+      // id: uuid(),
       username: username,
       password: password,
       email: email,
