@@ -8,9 +8,7 @@ export const TodoContextProvider = ({ children }) => {
 
   useEffect(() => {
     const data = axios
-      .get(
-        "http://96cff1d7-dede-4d7f-9ebf-c8703c86a655-00-x054rodcv2up.picard.replit.dev:3000/todos"
-      )
+      .get("http://https://683a116143bb370a8671c066.mockapi.io/api/todos")
       .then((res) => console.log(res.data));
     console.log(data);
     // setTodos(data)

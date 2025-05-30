@@ -1,40 +1,30 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
-export const TodoContext =  createContext();
+export const TodoContext = createContext();
 
+export const TodoContextProvider = ({ children }) => {
+  const [todos, setTodos] = useState([]);
 
+  useEffect(() => {
+    axios
+      .get("http://https://683a116143bb370a8671c066.mockapi.io/api/todos")
+      .then((res) => console.log(res.data))
+      .catch(error);
+  }, []);
 
-export const TodoContextProvider =( {children} )=>{
+  const addTodo = (newTodo) => {};
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
-    const [todos, setTodos] = useState([]);
+  const editTodoState = () => {};
 
-    useEffect(()=>{
-        axios.get("http://localhost:3000/todos")
-        .then((res)=>(
-            console.log(res.data)
-        ))
-        .catch((error))
-    },[])
-    
-    const addTodo =(newTodo)=>{
+  const clearAllTodos = () => {
+    setTodos(null);
+  };
 
-    }
-    const deleteTodo =(id)=>{
-        setTodos(  todos.filter( (todo) => (todo.id !== id) )  )
-    }
-
-    const editTodoState =()=>{
-
-    }
-
-    const clearAllTodos =()=>{
-        setTodos( null )
-    }
-
-
-    return <TodoContext.Provider  value={{todos}} >
-        {children}
-    </TodoContext.Provider>
-}
-
+  return (
+    <TodoContext.Provider value={{ todos }}>{children}</TodoContext.Provider>
+  );
+};

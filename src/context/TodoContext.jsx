@@ -10,8 +10,7 @@ export const TodoContextProvider = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
 
   // fetch todos data
-  const urlAPI =
-    "http://96cff1d7-dede-4d7f-9ebf-c8703c86a655-00-x054rodcv2up.picard.replit.dev:3000/todos";
+  const urlAPI = "http://https://683a116143bb370a8671c066.mockapi.io/api/todos";
 
   const fetchTodos = () => {
     if (currentUser?.id) {

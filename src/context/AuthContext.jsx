@@ -14,8 +14,7 @@ export const AuthContextProvider = ({ children }) => {
     return savedUser ? JSON.parse(savedUser) : null;
   });
 
-  const urlAPI =
-    "http://96cff1d7-dede-4d7f-9ebf-c8703c86a655-00-x054rodcv2up.picard.replit.dev:3000/users";
+  const urlAPI = "http://https://683a116143bb370a8671c066.mockapi.io/api/users";
   // fetch all users from API
   const fetchUsers = () => {
     axios
