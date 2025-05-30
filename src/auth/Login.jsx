@@ -18,17 +18,32 @@ const Login = () => {
   const handleSubmit =(e)=>{
     e.preventDefault();
 
-    const loginedUser =  allUsers.find( (user)=> (user.username === username && user.password === password) );
+    // const loginedUser =  allUsers.find( (user)=> (user.username === username && user.password === password) );
+    // if(loginedUser){
+    //   setError("");
+    //   handleLogin(loginedUser);
+    //   navigate("/");
+    //   sessionStorage.setItem("currentUser", JSON.stringify(loginedUser))
+    // }else{
+    //   setError("Username or Password not found, You don't have account 🤔");
+    // }
+axios.get("https://your-mockapi-url/users")
+  .then((res) => {
+    const loginedUser = res.data.find((user) => (user.username === username && user.password === password));
 
-
-    if(loginedUser){
+    if (loginedUser) {
       setError("");
       handleLogin(loginedUser);
       navigate("/");
-      sessionStorage.setItem("currentUser", JSON.stringify(loginedUser))
-    }else{
+      sessionStorage.setItem("currentUser", JSON.stringify(loginedUser));
+    } else {
       setError("Username or Password not found, You don't have account 🤔");
     }
+  })
+  .catch((err) => {
+    setError("Something went wrong while logging in 😓");
+    console.error(err);
+  });
 
   }
 

@@ -34,10 +34,16 @@ export const AuthContextProvider = ({ children }) => {
 
   // register
   const handleRegister = (newUser) => {
-    axios
-      .post(urlAPI, newUser)
-      .then((data) => console.log(data.data))
-      .catch((error = confirm.log("Failed to add new users in the app ❌")));
+    try{
+
+      axios
+        .post(urlAPI, newUser)
+        .then((data) => console.log(data.data))
+        .catch((error = confirm.log("Failed to add new users in the app ❌")));
+    }
+    catch (error) {
+      console.error("Registration Error:", error);
+    }
   };
 
   // logout
