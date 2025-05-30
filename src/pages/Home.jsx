@@ -20,10 +20,6 @@ const Home = () => {
 
 
 
-  /* *************************************** users ************************************ */
-  
-
-  
 
   /* *************************************** todos ************************************ */
   // delete single todo
@@ -31,6 +27,9 @@ const Home = () => {
     if (todoToDelete) {
       deleteTodo(todoToDelete);
       setTodoToDelete(null);
+
+    document.getElementById('deleteSingle_todo_modal').close();
+
     }
   }
 
@@ -55,6 +54,9 @@ const Home = () => {
   // ============================================ edit todo ============================================
   const handleEditTodo =(id, title)=>{
     editTodo(id, title)
+
+    document.getElementById('edit_todo_modal').close();
+
   }
 
   // ============================================ clear all todos ============================================
@@ -62,6 +64,8 @@ const Home = () => {
     clearAllTodos();
     document.getElementById('clear_todo_modal').close();
   }
+
+
   
   // open add modal
   const inputRef = useRef(null);
