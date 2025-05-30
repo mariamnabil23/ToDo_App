@@ -1,50 +1,43 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
-export const TodoContext =  createContext();
+export const TodoContext = createContext();
 
+export const TodoContextProvider = ({ children }) => {
+  const [todos, setTodos] = useState([]);
 
+  const urlAPI =
+    "http://96cff1d7-dede-4d7f-9ebf-c8703c86a655-00-x054rodcv2up.picard.replit.dev:3000/todos";
+  // fetch todos data
+  useEffect(() => {
+    axios
+      .get()
+      .then((res) => {
+        console.log(res.data);
+        setTodos(res.data);
+      })
+      .catch((error) => console.log("Error from Fetching Todos! ❌", error));
+  }, []);
 
-export const TodoContextProvider =( {children} )=>{
+  // add todo
+  const addTodo = (newTodo) => {
+    axios.post("");
+  };
 
-    const [todos, setTodos] = useState([]);
+  // delete todo
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
-    const urlAPI = "http://localhost:3000/todos";
-    // fetch todos data
-    useEffect(()=>{
-        axios.get()
-        .then((res)=>{
-            console.log(res.data);
-            setTodos(res.data);
-        })
-        .catch((error)=>(console.log("Error from Fetching Todos! ❌", error)))
-    },[])
-    
+  // edit todo state
+  const editTodoState = () => {};
 
-    // add todo
-    const addTodo =(newTodo)=>{
-        axios.post("")
+  // clear all todos
+  const clearAllTodos = () => {
+    setTodos(null);
+  };
 
-    }
-
-    // delete todo
-    const deleteTodo =(id)=>{
-        setTodos(  todos.filter( (todo) => (todo.id !== id) )  )
-    }
-
-    // edit todo state
-    const editTodoState =()=>{
-
-    }
-
-    // clear all todos
-    const clearAllTodos =()=>{
-        setTodos( null )
-    }
-
-
-    return <TodoContext.Provider  value={{todos}} >
-        {children}
-    </TodoContext.Provider>
-}
-
+  return (
+    <TodoContext.Provider value={{ todos }}>{children}</TodoContext.Provider>
+  );
+};
