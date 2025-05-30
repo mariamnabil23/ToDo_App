@@ -48,7 +48,7 @@ const Home = () => {
       }
     );
 
-    closeModal();
+    document.getElementById('add_todo_modal').close();
     setNewTodo( {title:""} )
   }
 

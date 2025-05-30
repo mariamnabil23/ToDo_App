@@ -62,7 +62,7 @@ export const TodoContextProvider = ({ children }) => {
     console.log("editing..", title);
 
     axios
-      .patch(`${urlAPI}/${id}`, { title: title })
+      .put(`${urlAPI}/${id}`, { title: title })
       .then((res) => {
         console.log("Todo Title Edited ✅");
         toast.success("Edit Done!", {
@@ -83,7 +83,7 @@ export const TodoContextProvider = ({ children }) => {
   // ============================================ edit todo state ============================================
   const handleTodoState = (id, currentState) => {
     axios
-      .patch(`${urlAPI}/${id}`, { completed: !currentState })
+      .put(`${urlAPI}/${id}`, { completed: !currentState })
       .then((res) => {
         console.log("State Updated ✅");
 
