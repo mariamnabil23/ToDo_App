@@ -22,7 +22,6 @@ const Login = () => {
 
 
     if(loginedUser){
-      console.log("user founded");
       setError("");
       handleLogin(loginedUser);
       navigate("/");
