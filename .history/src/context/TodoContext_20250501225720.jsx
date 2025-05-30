@@ -7,10 +7,7 @@ export const TodoContextProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
 
   useEffect(
-    () =>
-      caxios.get(
-        "http://https://683a116143bb370a8671c066.mockapi.io/api/todos"
-      ),
+    () => caxios.get("https://683a116143bb370a8671c066.mockapi.io/api/todos"),
     []
   );
 

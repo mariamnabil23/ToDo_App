@@ -9,7 +9,7 @@ export const TodoContextProvider =( {children} )=>{
 
     const [todos, setTodos] = useState([]);
 
-    const urlAPI = "http://https://683a116143bb370a8671c066.mockapi.io/api/todos";
+    const urlAPI = "https://683a116143bb370a8671c066.mockapi.io/api/todos";
     // fetch todos data
     useEffect(()=>{
         axios.get(urlAPI)

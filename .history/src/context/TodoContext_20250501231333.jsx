@@ -10,7 +10,7 @@ export const TodoContextProvider =( {children} )=>{
     const [todos, setTodos] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://https://683a116143bb370a8671c066.mockapi.io/api/todos")
+        axios.get("https://683a116143bb370a8671c066.mockapi.io/api/todos")
         .then((res)=>(
             console.log(res.data);
             f
