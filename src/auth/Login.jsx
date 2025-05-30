@@ -3,6 +3,7 @@ import { AuthContext } from '../context/AuthContext'
 import { Navigate, NavLink, useNavigate } from 'react-router-dom';
 import "../styles/login.css"
 import LogImg from '../assets/bg.jpeg'
+import axios from 'axios';
 
 
 const Login = () => {
